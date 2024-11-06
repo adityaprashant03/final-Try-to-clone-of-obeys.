@@ -1,0 +1,592 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plain Light';
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+.mousefollower{
+    border: 2px solid #fff;
+    background-color: rgb(255, 255, 255);
+    scale: 2;
+    mix-blend-mode: difference;
+}
+/* #crscr{
+    height: 1vw;
+    width: 1vw;
+    border-radius: 50%;
+    /* background-color: white; 
+    border: 2px solid rgba(255, 255, 255, 0.842);
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode:difference;
+    transform: translate(-50%,-50%);
+} */
+#loader{
+    height: 100vh; 
+    width: 100%;
+    position: fixed;
+    /* The z-index property specifies the stack order of an element. */
+    z-index: 999;
+    background-color: #111111;
+    padding: 11vw;
+    /* padding: 220px 10px  12px 20px; */
+    
+}
+
+
+.line{
+    /* background-color: red; */
+    height:fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+#line1-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1vw;
+}
+#line1-part1 h5,#line1-part1 h6{
+    font-size: 3.5vw;
+    font-weight: 400;
+    font-family:'silk serif' ;
+}
+#line1-part1 h5{
+    width: 5vw;
+    text-align: right;
+}
+.line h1{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.line h2{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight:900;
+    /* animation-name: loaderanime; */
+    animation-duration: 2.5s ;
+    animation-iteration-count: infinite;
+    text-align: left;
+}
+@keyframes loaderanime {
+    0%{
+        font-family:"plain light" ;
+        -webkit-text-stroke: 1px #fff;
+        color:#fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    47%{
+        font-family:"plain light" ;
+        -webkit-text-stroke: 1px #fff;
+        color:#fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+
+    }
+}
+
+
+/* aur humlog ka main div loder div ke picche chhuupp gya hai  */
+#main{
+    position: relative;
+    background-color: #252422;
+}
+#page1{
+    /* agar percentage mai heigh hai to ya background-color work nhi karta isliye vh mai liya gya hai ke bina parent ke bhi effects work kare*/
+    height: 80vh; 
+    width: 100%;
+    background-color: #252422;
+}
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 5.5vw;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+#nav-part2 h4{
+    font-size:0.9vw;
+    font-weight: 600;
+}
+.hero{
+    /* background-color: red; */
+    width: 75%;
+    margin-left: 26%;
+    height: fit-content;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+    /* background-color: red; */
+}
+.hero:nth-child(2){
+    margin-top: 19vh;
+}
+.hero h1{
+    font-size: 7.6vw;
+    /* font-weight: 600; */
+    text-transform: uppercase;
+    line-height: 7.4vw;
+    position: relative;
+}
+/* #hero1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: -3%;
+    top: 5%;
+}  */
+
+#hero3 h2{
+    font-size: 7.6vw;
+    /* font-weight: 600; */
+    text-transform: uppercase;
+    line-height: 7.4vw;
+    border-bottom: 0.5vw solid #fff;
+    padding-bottom: 0.5vw;
+    transition: all ease 0.3s;
+}
+#hero3 h2:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    font-weight: 500;
+    border-bottom: 0.5vw solid #ffffff00;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    padding-top: 17vh;
+    position: relative;
+}
+#video-container{
+    height: 65vh ;
+    width: 70vw;
+    position: relative;
+    left: 29%;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#video-container img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+#video-cursor{
+    background-color: #FFA63D;
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    z-index: 999;
+}
+#video-cursor i{
+    font-size:2vw ;
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: rgb(61, 61, 61); */
+    padding: 7vh 2vw;
+    position: relative;
+    margin-bottom: 20vh;
+}
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 28vw;
+
+}
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-family: silk serif;
+    font-weight: 100;
+    left: -12%;
+    top: 8%;
+}
+#page3 .under-line{
+    height: 0.8px;
+    width: 100%;
+    background-color: #ffff;
+    margin:5vw 0 ;
+    margin-left: 28vw;
+}
+
+#image-div-container{
+    /* background-color: red; */
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.image-div{
+    flex-shrink: 0;
+    height: 38vw;
+    width: 27vw;
+    /* background-color: blue; */
+    position: relative;
+    overflow: hidden;
+    margin: 2vw;
+}
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.image-div:nth-child(1){
+    height: 30vw;
+    width: 22vw;
+}
+.page3-circle1{
+    margin-top: 15vh;
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.page3-circle1 svg{
+    height: 40%;
+}
+.page3-circle2{
+    /* margin-top: 15vh; */
+    height: 23vw;
+    width: 23vw;
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page3-circle2 svg{
+    height: 40%;
+    rotate: -45deg;
+}
+
+.circle-in{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+
+}
+.circle-in p{
+    font-size: 0.9vw;
+    color: black;
+    width: 60%;
+    font-weight: 500;
+    scale: 0;
+    transition: all ease 0.3s;
+    transition-delay: 0.3s;
+}
+.page3-circle1:hover .circle-in{
+    scale: 1;
+}
+.page3-circle1:hover p{
+    scale: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+}
+.page3-circle2:hover p{
+    scale: 1;
+}
+#page4{
+    min-height:100vh ;
+    width: 100%;
+    padding: 7vh 0;
+    position: relative;
+    margin-bottom: 20vh;
+
+}
+#page4-content{
+    width: 72vw;
+    position: relative;
+    margin-left: 28%;
+}
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-family: silk serif;
+    font-weight: 100;
+    left: -12%;
+    top: 8%;
+}
+#page4-content .under-line{
+    height: 0.8px;
+    width: 100%;
+    background-color: #ffff;
+    margin:5vw 0 ;
+}
+#page4-content>p{
+    font-size:2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+
+}
+#page4-flex{
+    display: flex;
+}
+#page4-flex img{
+    width: 48%;
+
+}
+#page4-flex p{
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1vw;
+}
+#page4-blue-div{
+    background-color: #3F7DF4;
+    width: 33vw;
+    padding: 3vw;
+    position: relative;
+    margin-top:-35vh ;
+    margin-left: 26vw;
+
+}
+.blue-div-elem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1.7vw 0;
+    border-bottom: 1px solid #fff;
+}
+.blue-div-elem h4{
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+.blue-div-elem p{
+    width: 40%;
+    font-size: 0.8vw;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 5vw 0;
+    position: relative;
+}
+.elem{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden; /* yaha se scroller nhi dikhai dega*/
+    /* slinder banane ke liya white space or overflow-x:  ya sab aisa hi likhna hoga ke horizontally ya ek line mai slider ban jaye; */
+    margin-bottom: -2vw;
+}
+
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block; 
+   /* inlineblock ko child mai hi use karte hai slider banane ke liya  */
+    /* ek line mai lane mai help karta hai ya jaisa yaha h1 inlineblock nhi hota to uper nicha aata aab ek sath ek line mai hai  */
+    /* ek problem hai yaha per inline block lenen se na agar do h1 h1 ek line mai aaya to wo dono ke bich mai ek extra space create ho hi jata hai automatic wo space approx 4px hota hai  */
+    margin-right: 16px;
+    /* total space ho gya 4px aurtomatic + 16px =20px */
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+
+.elem2{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden; /* yaha se scroller nhi dikhai dega*/
+    /* slinder banane ke liya white space or overflow-x:  ya sab aisa hi likhna hoga ke horizontally ya ek line mai slider ban jaye; */
+    margin-bottom: -2vw;
+}
+
+.elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block; 
+   /* inlineblock ko child mai hi use karte hai slider banane ke liya  */
+    /* ek line mai lane mai help karta hai ya jaisa yaha h1 inlineblock nhi hota to uper nicha aata aab ek sath ek line mai hai  */
+    /* ek problem hai yaha per inline block lenen se na agar do h1 h1 ek line mai aaya to wo dono ke bich mai ek extra space create ho hi jata hai automatic wo space approx 4px hota hai  */
+    margin-right: 16px;
+    transform: translateX(calc(-100% - 20px));
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+
+}
+.elem span{
+    font-style: italic;
+    font-family: silk serif;
+    color: transparent;
+}.elem2 span{
+    font-style: italic;
+    font-family: silk serif;
+    color: transparent;
+}
+
+#footer{
+    height: 80vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 2vw;
+}
+#footer h1{
+    text-transform: uppercase;
+    font-size: 7vw;
+    /* background-color: blue; */
+    position: relative;
+    
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-family: silk serif;
+    font-weight: 100;
+    left: -12%;
+    top: 8%;
+}
+.underline{
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    margin: 2vw 0;
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 3vw;
+    margin-bottom: 3vw;
+}
+#footer-div h6{
+    font-size: 0.9vw;
+    margin-bottom: 1.5vw;
+    font-weight: 500;
+}
+.box{
+    width: 20%;
+}
+#footer-div h5{
+    font-size: 1.5vw;
+    margin: 0.3vh 0;
+    font-weight: 500;
+}
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+/* aab jo likha gya haii wo isliye likha gya hai ke jo image mai gooly chal raha hai wo chal paya */
+._canvas_container{
+z-index: 99999999 !important;
+pointer-events: none;
+}
+
+#flag{
+    height: 20vw;
+    width: 30w;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -25%);
+    opacity: 0;
+}
+#hero3{
+    /* background-color: red; */
+    z-index: 999;
+    position: relative;
+}
